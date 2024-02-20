@@ -156,8 +156,27 @@
 		</div>
 	</section>
 
-	<!-- Скрипт для теста стилей кнопок выбора языка -->
+
 	<script>
+
+		// Скрипт для теста броузера на поддержку WEBP
+		function testWebP(callback) {
+			var webP = new Image();
+			
+			webP.onload = webP.onerror = function () {
+				callback(webP.height == 2);
+			};
+			webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+		}
+			
+		testWebP(function (support) {
+			const className = (support === true ? 'webp' : 'no-webp');
+			// document.documentElement.classList.add(className);
+			document.querySelector('body').classList.add(className);
+		});
+
+
+		// Скрипт для теста стилей кнопок выбора языка
 		const langButtons = document.querySelectorAll('.lang__btn');
 		langButtons.forEach((element) => {
 			element.addEventListener('click', (e) => {
@@ -166,6 +185,7 @@
 				});
 			});
 		});
+
 	</script>
 
 </body>

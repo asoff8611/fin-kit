@@ -60,11 +60,15 @@
 	box-shadow: 8px -8px 16px 0px rgba(0, 0, 0, 0.06);
 }
 #section__img-block1 {
-	background-image: url("../img/s1.png");
+	background-image: image-set(
+    url("../img/s1.webp") type("image/webp"),
+    url("../img/s1.png") type("image/png"));
 	background-position: 0px -10px;
 }
 #section__img-block2 {
-	background-image: url("../img/s2.png");
+	background-image: image-set(
+    url("../img/s2.webp") type("image/webp"),
+    url("../img/s2.png") type("image/png"));
 	background-position: 0px -28px;
 }
 
