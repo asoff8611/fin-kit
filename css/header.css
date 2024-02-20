@@ -1,0 +1,127 @@
+#header {
+	background-color: var(--HeaderBackgroundColor);
+	background-image: url("../img/phone.png");
+	background-repeat: no-repeat;
+	background-size: clamp(34.25rem, 27.316rem + 29.58vw, 46.25rem);		/* 548px -> 740px */
+	background-position: right -160px top 10px;
+	position: relative;
+}
+
+#header__title-container {
+	padding-top: calc(453px + 129px -
+		clamp(8.063rem, -3.638rem + 49.92vw, 28.313rem));		/* 453px -> 129px */
+}
+#header__title-container img {
+	height: clamp(3.688rem, 3.001rem + 2.93vw, 4.875rem);		/* 59px -> 78px*/
+	margin-bottom: 12px;
+}
+
+.logo {
+	display: none;
+}
+#header h1 {
+	font-size: clamp(1rem, 0.783rem + 0.92vw, 1.375rem);		/* 16px -> 22px */
+	font-weight: 400;
+	line-height: 130%;
+	width: 340px;
+	padding-right: 12px;
+}
+
+#header .cart__container {
+	margin-top: clamp(1.063rem, -5.438rem + 27.73vw, 12.313rem);		/* 17px -> 197px */
+	padding-bottom: 33px;
+}
+
+@media (min-width: 590px) {
+	.button {
+		width: 250px;
+	}
+	
+	.cart {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row;
+	}
+	.cart h3 {
+		order: -1;
+	}
+	.cart-icon__circle {
+		margin-top: 8px;
+		margin-left: 0;
+	}
+}
+
+@media (min-width: 850px) {
+	#header__title-container img {
+		margin-bottom: 14px;
+	}
+	
+	.cart__container {
+		grid-template-columns: repeat(4, 1fr);
+		gap: 20px;
+		max-width: unset;
+	}
+	.cart {
+		display: flex;
+		justify-content: unset;
+		flex-flow: column;
+	}
+	.cart h3 {
+		font-size: 16px;
+		order: 0;
+	}
+	.cart-icon__circle {
+			margin-top: -5px;
+			margin-left: 18px;
+	}
+}
+
+@media (min-width: 1024px) {
+	#header__title-container {
+		padding-bottom: 280px;
+	}
+
+	#header img {
+		display: none;
+	}
+	.logo {
+		display: block;
+		/* vertical-align: text-top; */
+		font-size: 64px;
+		font-weight: 700;
+		line-height: 130%;
+		border-style: hidden;
+		outline: none;
+		/* width: 100px; */
+		height: 80px;
+		margin-bottom: 11px;
+	}
+	.logo span {
+		/* display: block; */
+		width: 122px;
+		/* height: 80px; */
+		background-color: var(--BackgroundColor);
+		border-radius: 20px;
+
+		color: var(--AccentColor);
+		letter-spacing: 0.6%;
+		/* width:98px; */
+		margin-left: 5px;
+		padding: 0 12px 0 15px;
+	}
+
+	.button {
+		padding: 0;
+		width: 199px;
+		height: 52px;
+		border-radius: 12px;
+	}
+
+	#header .cart__container {
+		position: absolute;
+		top: 572px;
+		width: var(--container);
+		margin-top: 0;
+		padding-bottom: 0;
+	}
+}
