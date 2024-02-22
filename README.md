@@ -20,5 +20,6 @@ https://www.figma.com/file/ggA2hlBHJfI6CeuKclkqr9/Finkit-Test
 - шрифт 'Inter': https://gwfh.mranftl.com/fonts
 - иконки: https://www.veryicon.com/icons/miscellaneous/large-fillet/
 - иконочный шрифт: https://fontello.com/
+- конвертер графических форматов: https://convertio.co/ru/
 - адаптив: https://min-max-calculator.9elements.com/
 - валидатор: https://validator.w3.org/
